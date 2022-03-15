@@ -1,0 +1,603 @@
+C++ notes:
+-------------------------
+Course content
+---------------------
+1. C++ Basics
+
+2. C++ Decision Making
+
+3. C++ Arrays
+
+4. C++ Structure
+
+5. C++ Union
+
+6. C++ Pointer
+
+7. C++ Strings
+
+8. C++ patterns
+
+9. C++ Functions
+
+10. C++ Conversion
+
+
+C++ Using OOPs
+
+-----------------------------
+1. Class & objects
+
+2. Inheritance
+
+3. Polymorphism
+
+4. Encapsulation
+
+5. Abstraction
+
+6. Constructor & Destructor
+
+7. Overloading
+  
+7.1 Function Overloading
+  
+7.2 Operator Overloading
+
+8. Function Overriding
+
+9. Templates
+
+10. Exceptional Handling
+
+11. File Handling
+Structure of C++
+-------------------------
+
+1.Documentation part(Use as a comment)
+   
+a. For single line comment(//)
+   
+b. For muli line comment(/*         */)
+
+2.Preprocessor Part
+   
+a. Link part     (#include<iostream.h>)
+   
+b.Definition part   (#define a 10)
+
+3. Global declaration part
+a. variable  
+b. function  
+c. structure  
+d.class
+
+4. main function
+{
+//block of code
+}
+
+
+Example of c++ basic hello world program
+----------------------------------------------------
+#include<iostream.h>
+
+#include<conio.h>
+
+void main()
+
+{
+
+cout<<"hello world";
+
+getch();
+
+}
+Class in C++
+---------------------------------
+1. Class is a user define datatype which is declared by keyword class
+
+2. Class contain it's ouwn data member and member function
+
+3. These data member and member function accessed by three access specifier.
+(private,protected,public).
+
+4.By default the access specifier of class is private.
+
+Example:
+
+
+class A
+{
+
+private:
+
+int a,b;
+
+public:
+
+void show()
+
+{
+
+cout<<b<<b;
+
+}
+
+};
+
+
+
+Types of class
+
+1. Local
+
+2. Global
+
+3. Friend
+
+4. Template
+
+5. Abstract
+
+6. Static
+Polymorphism-->Polymorphism is the combination of two greek words
+one is poly means many and another is morphism means forms
+ Polymorphism-Manyforms
+ "Whose meaning is same object having different behaviour"
+
+
+Types of polymorphism-->
+
+1. Compile time/static polymorphism
+(ex : Method overloading)
+
+2. Runtime polymorphism/Dynamic polymorphism
+(ex: Method overriding)
+  
+
+Example:
+1.compile time polymorphism
+
+void add(int x,int y)
+{
+
+}
+
+void add(int x,float y)
+{
+
+}
+
+
+1. Runtime polymorphism
+
+void add()
+{
+
+}
+void add()
+{
+
+}
+Polymorphism-->many forms 
+funtion with same name but different arguments which we perform 
+differently is called polymorphism
+
+Poly-->many
+
+morphism-->forms
+
+
+types of polymorphism
+
+1.compile time polymorphism(method/function overloading)
+
+2. runtime polymorphism (method overriding)
+
+
+add(int a,int b)//parameter
+
+add(23,56)//argument    
+23+56=97
+
+add(float c, float d)
+
+add(23.4f,56.7f)   
+23.4+56.7=80.1
+Encapsulation:-
+It is one of the most important feature of oops.that used to wrapping a
+data and function into a single unit.The data of class is not accessible to outside the class,
+only those function access data which are wrapped in the class.
+
+Ex:
+class is an example of encapsulation,which bind the data and function together that manipulate those data.
+
+Abstraction:-
+Abstraction is the one of the most important feature of OOP's which is showing only the essential information 
+to the outside world and hiding the inernal details.
+
+Abstraction types:-
+
+1.class
+
+2. Headerfile
+@ class:-
+
+class A
+{
+
+private:
+
+int a=10;
+
+public:
+
+void show()
+
+{
+
+cout<<a;
+
+}
+
+};
+
+int main()
+
+{
+
+A obj;
+
+obj.show();
+
+}
+
+
+@ Headerfile:-
+
+#include<math.h>
+
+int main()
+
+{
+
+int a=4,b;
+
+b=sqrt(a);
+
+cout<<b;
+
+}
+Constructor in c++
+
+Constructor is a special member function of class which is used to 
+create and initialize the objects.
+
+Features:
+
+1. A constructor can only have one access modifier,which is public
+
+2. A constructor is never inherited and overridden.
+
+3.each and every c++ class has construtor either it is provided 
+by compiler by default or explecitely created.
+
+
+constructor and Destructor:
+Constructor-
+
+1.Constructor is a special type of function which has the same name as the class name.
+
+2.The return type of the constructor is the class type
+
+3.constructor is being automatically call at the time of object declaration.
+
+Destructor-
+
+1.Destructor is a special member function that is executed automatically when an object is destroyed that has been 
+created by the constructor.
+
+2. destructor are used to de-allocate for the object by the constructor.
+
+3. A destructor declaration should always begi with the tidle(~)
+symbol as shown in the example.
+
+
+
+types of constructor:
+
+1. Default construtor
+
+2. Parameterized constructor
+
+3. Copy Constructor
+Default constructor:
+
+1.A constructor that accepts no parameters is called default constructor.
+ 
+syntax-->
+
+class-name()
+{
+//code
+}
+
+
+class A
+
+{
+
+int a;//private
+
+public:
+
+A()
+
+{
+
+cout<<"Hello World";
+
+}
+
+};
+
+int main()
+
+{
+
+A obj;
+
+getch();
+
+return 0;
+
+}
+
+2.Parametrized Constructor:
+A constructor that accepts or receive parameter is called parameterized constructor.
+
+class A
+
+{
+
+int a,b;
+
+public:
+
+A(int x,int y)
+
+{
+
+a=x;
+b=y;
+
+}
+
+void show()
+
+{
+
+cout<<a<<" "<<b;
+ 
+}
+
+};
+
+int main()
+
+{
+
+A obj(10,20);
+
+obj.show();
+
+getch();
+
+return 0;
+
+}
+
+
+3. Copy constructor:
+A constructor that is used to copy or initialize the value of one object into another object is called copy constructor.
+
+Syntax:
+
+class-name(class-name &ref)
+
+{
+
+//code;
+
+}
+Abstract Class:
+A class which contain at least one pure virtual function.We can't declare the object of abstract class.
+
+syntax:
+class A
+{
+
+public:
+virtual void show()=0;
+// virtual  return-type  function-name=0;
+};
+
+
+Pure virtual function:
+
+1.Pure virtual function are virtual functions which have no definition.They start with virtual keyword and ends with equal to zero.
+
+2. If we don't override the pure virtual function in derive class, then derive class also becomes abstract class.
+
+3. we can't change the signature/syntax  of pure virtual function.
+
+
+Friend class:
+If a class become a friend class to a other class then it can access the all function ie private and protected member of that class.
+friend class is always declare with the friend kayword.
+
+syntax:
+
+class A
+{
+
+public:
+member fun()
+
+{
+
+}
+
+friend class B;
+
+};
+
+class B
+
+{
+
+public:
+member fun(A obj)
+
+{
+
+}
+
+};
+
+
+Friend function:
+
+1.friend function is a function which is not the member of the class instead of that it can access private and protected member of class.
+
+syntax:
+
+friend return-type function-name(class obj)
+
+{
+
+body
+
+}
+
+
+2.friend function is declared in the class with friend keyword.
+
+3.friend function can become friend to more than one class.
+
+Inline function:
+Inline is a request to the compiler(not a command) to make a function as an inline function,to reduce the overhead of function calling. If compiler treats a function as an inline function it substitute the code of function in a single line.
+Inline function should contain a single instruction.
+syntax:
+inline return-type function-name()
+{
+//single instruction
+}
+
+Template:
+template is the frame which define its actual meaning in a c++ programming. We can draw any logic using template. It will create appropriate code at the time of execution. we can use template in c++ by two way one is function template anther is class template.
+function template is known as generic function and class template is also known as generic class. It demostrate by following way:
+template:1. Generic function  2. Generic class
+syntax--> 1. function template-
+template<class type>
+return-type function-name(parametrized list)
+{
+body;
+}
+
+2. class template-
+template<class type>
+class class-name
+{
+------------
+public:
+type var;
+Type function-name(type Arg)
+}
+
+template support any type of data type.
+
+Static:
+1.static data member//static variable
+2.static member function//static function
+
+Static Data Member:
+1.whenever we declare a data member as a static inside or outside of a class called static data member.
+2. there is only one copy of  static data member even if there are many class objects.
+3. It is always initialized with zero because it's default value is zero.
+4. It is shared memory for all objects of the class.
+5. It retains it's value.
+Static Member Function:
+1. If we create a member function of a class as a static called static member function.
+2.It is access only static data member.
+3. It is also accessible if we don't have any object of a class.
+
+example:
+class A
+{
+int a;
+static int b;
+public:
+A(int x, int y)
+{
+a=x;
+b=y;
+}
+void show()
+{
+cout<<a<<" "<<b;
+}
+static void display()
+{
+cout<<b;//a is not accessible because its not static data member
+}
+};
+int A::b=0;//:: scope resolution operator 
+int main()
+{
+A obj(10,20),obj1(100,200);
+obj.show();
+obj2.show();
+A::display();
+}
+
+File Handling:
+file is a collection of a data which occupied some space in the disk.
+C++ file handling provides a mechanism to store output of a program in a file and read output from a file display on the disk.
+Files are mainly deals with three classes"fstream, ifstream,ofstream" available in fstream header file.
+Uses:-
+1.ifstream--> To read the information from the file.
+2.ofstream-->To write something into a file we have to create objects ofstream.
+3.fstream-->To perform both read and write operation we have to create object fstream.
+
+
+Exception handling:
+Exceptional handling is a process to handle runtime errors. we perform exception handling so, the normal flow of program can be maintained even after runtime errors.
+syntax:
+
+try
+{
+throw exception;
+}
+catch(type arg)
+{
+//code;
+}
+
+1.try: It  represent block of code that can throw an exception.
+2.catch: It represents block of code that is executed when a particular exception is thrown.
+3.throw:It is used to throw an exception.
+
+Function overloading;
+function overloading is  a feature of c++ were we have more than one function with the same name and different types of parameters then it is known as function overloading.
+
+
+
+
+
+
+
+
+
+
